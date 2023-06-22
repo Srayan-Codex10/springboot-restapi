@@ -15,12 +15,16 @@ import com.restapi.model.Book;
 @RequestMapping("/api/v1")
 public class ApiController {
 
-	@Autowired
 	RestDao restDao;
+
+	@Autowired
+	ApiController(RestDao dbDao) {
+		this.restDao = dbDao;
+	}
 
 	@GetMapping("/books")
 	public List<Book> getAllBooks() {
-		
+
 		return restDao.findAllBooks();
 
 	}
@@ -29,7 +33,7 @@ public class ApiController {
 	public Book getBookByIsbn(@PathVariable(value = "isbn") String isbn) {
 		// dao method call
 
-		return null;
+		return restDao.findBookByIsbn(isbn).get();
 	}
 
 }

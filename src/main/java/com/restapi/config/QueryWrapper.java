@@ -16,4 +16,7 @@ public class QueryWrapper {
 	
 	@Value("${getbooksbypages}")
 	private String booksByPages;
+	
+	@Value("${getbookbyisbn}")
+	private String bookByIsbn;
 }

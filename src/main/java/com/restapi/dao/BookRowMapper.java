@@ -13,7 +13,7 @@ public class BookRowMapper implements RowMapper<Book> {
 	public Book mapRow(ResultSet rs, int rowNum) throws SQLException {
 
 		Book b = new Book();
-		// lombok issue need to fix
+		b.setAuthor(rs.getString("author"));
 		return b;
 	}
 
