@@ -25,16 +25,12 @@ public class ApiController {
 
 	@GetMapping("/books")
 	public ResponseEntity<List<Book>> getAllBooks() {
-
-//		return restDao.findAllBooks();
-
+		return ResponseEntity.ok(apiService.findAll());
 	}
 
 	@GetMapping("/books/{isbn}")
 	public ResponseEntity<Book> getBookByIsbn(@PathVariable(value = "isbn") String isbn) {
-		// dao method call
-
-//		return restDao.findBookByIsbn(isbn).get();
+		return ResponseEntity.ok(apiService.findById(isbn));
 	}
 
 }
