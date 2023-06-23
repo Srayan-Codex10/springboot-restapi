@@ -25,7 +25,6 @@ public class RestServiceImpl implements IRestService {
 
 	@Override
 	public Book findById(String id) {
-		// TODO Auto-generated method stub
 		return dao.findBookByIsbn(id).get();
 	}
 

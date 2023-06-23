@@ -13,7 +13,7 @@ import com.restapi.model.Book;
 import com.restapi.service.IRestService;
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/v1")
 public class ApiController {
 
 	IRestService apiService;

@@ -16,5 +16,4 @@ public class TestApplication {
 		springApp.setBannerMode(Banner.Mode.OFF);
 		springApp.run();
 	}
-
 }

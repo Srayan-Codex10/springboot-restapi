@@ -10,7 +10,6 @@ import lombok.Setter;
 @Setter
 public class RestAppConfig {
 
-	private DatabaseConfig database;
 	private String ver;
 	private String env;
 }

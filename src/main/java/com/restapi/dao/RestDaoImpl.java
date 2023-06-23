@@ -28,12 +28,10 @@ public class RestDaoImpl implements RestDao {
 	@Override
 	public List<Book> findAllBooks() {
 		return jdbc.query(query.getBooks(), new BookRowMapper());
-
 	}
 
 	@Override
 	public Optional<Book> findBookByIsbn(String isbn) {
-		// SqlParameterSource sqlMap = new Map
 		SqlParameterSource sqlMap = new MapSqlParameterSource().addValue("isbn", isbn);
 		return Optional.ofNullable(jdbc.queryForObject(query.getBookByIsbn(), sqlMap, Book.class));
 	}
