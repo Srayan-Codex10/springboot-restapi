@@ -5,11 +5,12 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import lombok.Getter;
 import lombok.Setter;
 
-@ConfigurationProperties
+@ConfigurationProperties(prefix = "spring")
 @Getter
 @Setter
 public class RestAppConfig {
-	
-	private String port;
-	private String host;
+
+	private DatabaseConfig database;
+	private String ver;
+	private String env;
 }

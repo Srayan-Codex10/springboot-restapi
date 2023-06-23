@@ -1,0 +1,16 @@
+spring:
+ ver: 1.0
+ env: local
+ database:
+  url: jdbc:postgres://localhost:5432/postgres
+  user: postgres
+  password: root@1234
+ server:
+  port: 8080
+
+ logging:
+  level:
+   org.springframework: INFO
+   com.restapi: DEBUG
+  pattern:
+   console: 

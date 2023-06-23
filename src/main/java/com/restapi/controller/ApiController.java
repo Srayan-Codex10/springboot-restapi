@@ -3,37 +3,38 @@ package com.restapi.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.restapi.dao.RestDao;
 import com.restapi.model.Book;
+import com.restapi.service.IRestService;
 
 @RestController
 @RequestMapping("/api/v1")
 public class ApiController {
 
-	RestDao restDao;
+	IRestService apiService;
 
 	@Autowired
-	ApiController(RestDao dbDao) {
-		this.restDao = dbDao;
+	ApiController(IRestService serv) {
+		this.apiService = serv;
 	}
 
 	@GetMapping("/books")
-	public List<Book> getAllBooks() {
+	public ResponseEntity<List<Book>> getAllBooks() {
 
-		return restDao.findAllBooks();
+//		return restDao.findAllBooks();
 
 	}
 
 	@GetMapping("/books/{isbn}")
-	public Book getBookByIsbn(@PathVariable(value = "isbn") String isbn) {
+	public ResponseEntity<Book> getBookByIsbn(@PathVariable(value = "isbn") String isbn) {
 		// dao method call
 
-		return restDao.findBookByIsbn(isbn).get();
+//		return restDao.findBookByIsbn(isbn).get();
 	}
 
 }
