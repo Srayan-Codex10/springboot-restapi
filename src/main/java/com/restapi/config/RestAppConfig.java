@@ -12,4 +12,6 @@ public class RestAppConfig {
 
 	private String ver;
 	private String env;
+	private DatabaseConfig datasource;
+	
 }

@@ -4,8 +4,15 @@ spring:
  datasource:
   url: jdbc:postgresql://localhost:5432/postgres
   user: postgres
-  password: root@1234
-  driverClassName: org.postgresql.Driver   
+  password: cm9vdEAxMjM0
+  driverClassName: org.postgresql.Driver
+  hikari:
+   autoCommit: true
+   idleTimeout: 10000
+   minimumIdle: 1
+   maximumPoolSize: 5
+   maxLifeTime: 20000
+   poolName: HikariCP-1
  server:
   port: 8080
   contextPath: /rest/api
@@ -16,3 +23,4 @@ spring:
    com.restapi: DEBUG
   pattern:
    console: "%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n"
+
