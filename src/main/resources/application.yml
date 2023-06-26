@@ -1,21 +1,20 @@
-spring:
- ver: 1.0
- env: local
- datasource:
-  url: jdbc:postgresql://localhost:5432/postgres
-  user: postgres
-  password: cm9vdEAxMjM0
-  driverClassName: org.postgresql.Driver
-  hikari:
-   autoCommit: true
-   idleTimeout: 10000
-   minimumIdle: 1
-   maximumPoolSize: 5
-   maxLifeTime: 20000
-   poolName: HikariCP-1
- server:
-  port: 8080
-  contextPath: /rest/api
+ver: 1.0
+env: local
+datasource:
+ url: jdbc:postgresql://localhost:5432/postgres
+ user: postgres
+ password: cG9zdGdyZXM=
+ driverClassName: org.postgresql.Driver
+ autoCommit: true
+ idleTimeout: 10000
+ minimumIdle: 1
+ maximumPoolSize: 5
+ maxLifeTime: 20000
+ poolName: HikariCP-1
+server:
+ port: 4000
+ servlet:
+  context-path: /rest/api
 
  logging:
   level:
