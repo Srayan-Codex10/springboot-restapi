@@ -1,12 +1,12 @@
 package com.restapi.config;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.stereotype.Component;
 
 import lombok.Getter;
 
-@Component
+@Configuration
 @PropertySource("classpath:query.properties")
 @Getter
 public class QueryWrapper {

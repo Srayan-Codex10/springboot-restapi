@@ -3,7 +3,7 @@ env: local
 datasource:
  url: jdbc:postgresql://localhost:5432/postgres
  user: postgres
- password: cm9vdEAxMjM0
+ password: cG9zdGdyZXM=
  driverClassName: org.postgresql.Driver
  autoCommit: true
  idleTimeout: 10000

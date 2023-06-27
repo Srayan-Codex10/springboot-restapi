@@ -37,6 +37,7 @@ public class RestDaoImpl implements RestDao {
 	public Optional<Book> findBookByIsbn(String isbn) {
 		SqlParameterSource sqlMap = new MapSqlParameterSource().addValue("isbn", isbn);
 		log.info(query.getBookByIsbn());
+		log.info(sqlMap.toString());
 		return Optional.ofNullable(jdbc.queryForObject(query.getBookByIsbn(), sqlMap, Book.class));
 	}
 
