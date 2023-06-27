@@ -3,7 +3,7 @@ env: local
 datasource:
  url: jdbc:postgresql://localhost:5432/postgres
  user: postgres
- password: cG9zdGdyZXM=
+ password: cm9vdEAxMjM0
  driverClassName: org.postgresql.Driver
  autoCommit: true
  idleTimeout: 10000
@@ -16,10 +16,10 @@ server:
  servlet:
   context-path: /rest/api
 
- logging:
-  level:
-   org.springframework: INFO
-   com.restapi: DEBUG
-  pattern:
-   console: "%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n"
+logging:
+ level:
+  org.springframework: INFO
+  com.restapi: DEBUG
+ pattern:
+  console: "%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n"
 
