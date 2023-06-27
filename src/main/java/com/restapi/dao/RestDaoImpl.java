@@ -12,7 +12,10 @@ import org.springframework.stereotype.Repository;
 import com.restapi.config.QueryWrapper;
 import com.restapi.model.Book;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Repository
+@Slf4j
 public class RestDaoImpl implements RestDao {
 
 	QueryWrapper query;
@@ -33,6 +36,7 @@ public class RestDaoImpl implements RestDao {
 	@Override
 	public Optional<Book> findBookByIsbn(String isbn) {
 		SqlParameterSource sqlMap = new MapSqlParameterSource().addValue("isbn", isbn);
+		log.info(query.getBookByIsbn());
 		return Optional.ofNullable(jdbc.queryForObject(query.getBookByIsbn(), sqlMap, Book.class));
 	}
 
